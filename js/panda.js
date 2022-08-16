@@ -30,3 +30,18 @@ for(const buyButton of buyNowButton){
 }
 
 // ৭. একদম নিচে একটা LET'S STAY IN TOUCH নামে একটা জিনিস আছে। সেখানে তুমি submit বাটনটা disable করে ফেলবে। তারপর কেউ যদি উপরে input ফিল্ডে যদি একজাক্টলি email শব্দটা লিখে। তাহলে বাটন একটিভ হবে। আর যদি অন্য কিছু লিখে তাহলে বাটনটা একটিভ হবে না। 
+document.getElementById('delete_button').addEventListener('keyup', function(event){
+    const text = event.target.value;
+    const deleteButton = document.getElementById('btn-delete');
+    if(text === 'Email'){
+        deleteButton.removeAttribute('disabled')
+    }
+    else{
+        deleteButton.setAttribute('disabled')
+    }
+})
+document.getElementById('btn-delete').addEventListener('click',function(){
+    const secret = document.getElementById('btn-delete')
+    secret.style.display='none';
+})
+
